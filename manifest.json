@@ -13,8 +13,8 @@
     "default_title": "Clima"
   },
   "icons": {
-    "16": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%23FFB84D'/></svg>",
-    "48": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='18' fill='%23FFB84D'/></svg>",
-    "128": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><circle cx='64' cy='64' r='48' fill='%23FFB84D'/></svg>"
+    "16": "icons/16.svg",
+    "48": "icons/48.svg",
+    "128": "icons/128.svg"
   }
 }
