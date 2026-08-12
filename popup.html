@@ -3,25 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clima</title>
+  <title>Clima & Rotas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Clima</h1>
-    
-    <div class="search-box">
-      <input 
-        type="text" 
-        id="cityInput" 
-        placeholder="Digite uma cidade"
-        autocomplete="off"
-      >
-      <button id="searchBtn">Buscar</button>
-    </div>
+  <main class="app">
+    <header class="app-header">
+      <img src="icons/48.png" alt="" width="36" height="36">
+      <div>
+        <h1>Clima & Rotas</h1>
+        <p>Previsão rápida e distância entre locais</p>
+      </div>
+    </header>
 
-    <div id="result"></div>
-  </div>
+    <section class="card" aria-labelledby="weatherTitle">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Meteorologia</span>
+          <h2 id="weatherTitle">Como está o tempo?</h2>
+        </div>
+      </div>
+
+      <form id="weatherForm" class="search-row">
+        <label class="sr-only" for="cityInput">Cidade</label>
+        <input id="cityInput" type="text" placeholder="Ex.: Curitiba" autocomplete="off" required>
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div id="weatherStatus" class="status" aria-live="polite"></div>
+      <div id="weatherResult" hidden></div>
+    </section>
+
+    <section class="card" aria-labelledby="routeTitle">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Distância</span>
+          <h2 id="routeTitle">Origem e destino</h2>
+        </div>
+      </div>
+
+      <form id="routeForm" class="route-form">
+        <label for="originInput">Origem</label>
+        <input id="originInput" type="text" placeholder="Ex.: São Paulo" autocomplete="off" required>
+
+        <label for="destinationInput">Destino</label>
+        <input id="destinationInput" type="text" placeholder="Ex.: Campinas" autocomplete="off" required>
+
+        <button type="submit">Calcular distância</button>
+      </form>
+
+      <div id="routeStatus" class="status" aria-live="polite"></div>
+      <div id="routeResult" class="route-result" hidden>
+        <span class="route-label">Distância aproximada em linha reta</span>
+        <strong id="distanceValue"></strong>
+        <span id="routePlaces" class="route-places"></span>
+        <button id="mapsBtn" class="secondary-button" type="button">Abrir rota no Google Maps</button>
+      </div>
+    </section>
+
+    <footer>Dados meteorológicos: Open-Meteo</footer>
+  </main>
 
   <script src="popup.js"></script>
 </body>
