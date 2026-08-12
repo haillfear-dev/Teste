@@ -1,20 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "Clima",
-  "version": "1.0",
-  "description": "Extensão simples para consultar o clima de qualquer cidade",
-  "permissions": [],
+  "name": "Clima & Rotas",
+  "version": "2.0.0",
+  "description": "Consulte o clima e calcule distâncias entre locais com acesso rápido ao Google Maps.",
   "host_permissions": [
     "https://geocoding-api.open-meteo.com/*",
     "https://api.open-meteo.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Clima"
+    "default_title": "Clima & Rotas",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
   },
   "icons": {
-    "16": "icons/16.svg",
-    "48": "icons/48.svg",
-    "128": "icons/128.svg"
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
   }
 }
