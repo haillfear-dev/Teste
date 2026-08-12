@@ -16,6 +16,18 @@
       </div>
     </header>
 
+    <section class="dashboard" aria-labelledby="dashboardTitle">
+      <div class="section-heading dashboard-heading">
+        <div>
+          <span class="eyebrow">Agora</span>
+          <h2 id="dashboardTitle">Clima nas principais cidades</h2>
+        </div>
+        <button id="refreshDashboard" class="icon-button" type="button" aria-label="Atualizar cidades">↻</button>
+      </div>
+      <div id="dashboardStatus" class="status" aria-live="polite"></div>
+      <div id="weatherDashboard" class="weather-dashboard" aria-busy="true"></div>
+    </section>
+
     <section class="card" aria-labelledby="weatherTitle">
       <div class="section-heading">
         <div>
@@ -26,7 +38,11 @@
 
       <form id="weatherForm" class="search-row">
         <label class="sr-only" for="cityInput">Cidade</label>
-        <input id="cityInput" type="text" placeholder="Ex.: Curitiba" autocomplete="off" required>
+        <div class="autocomplete">
+          <input id="cityInput" type="text" placeholder="Ex.: Curitiba" autocomplete="off" required
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="citySuggestions">
+          <ul id="citySuggestions" class="suggestions" role="listbox" hidden></ul>
+        </div>
         <button type="submit">Buscar</button>
       </form>
 
@@ -44,10 +60,18 @@
 
       <form id="routeForm" class="route-form">
         <label for="originInput">Origem</label>
-        <input id="originInput" type="text" placeholder="Ex.: São Paulo" autocomplete="off" required>
+        <div class="autocomplete">
+          <input id="originInput" type="text" placeholder="Ex.: São Paulo" autocomplete="off" required
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="originSuggestions">
+          <ul id="originSuggestions" class="suggestions" role="listbox" hidden></ul>
+        </div>
 
         <label for="destinationInput">Destino</label>
-        <input id="destinationInput" type="text" placeholder="Ex.: Campinas" autocomplete="off" required>
+        <div class="autocomplete">
+          <input id="destinationInput" type="text" placeholder="Ex.: Campinas" autocomplete="off" required
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="destinationSuggestions">
+          <ul id="destinationSuggestions" class="suggestions" role="listbox" hidden></ul>
+        </div>
 
         <button type="submit">Calcular distância</button>
       </form>
