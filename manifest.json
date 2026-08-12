@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Clima",
+  "version": "1.0",
+  "description": "Extensão simples para consultar o clima de qualquer cidade",
+  "permissions": [],
+  "host_permissions": [
+    "https://geocoding-api.open-meteo.com/*",
+    "https://api.open-meteo.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Clima"
+  },
+  "icons": {
+    "16": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%23FFB84D'/></svg>",
+    "48": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='18' fill='%23FFB84D'/></svg>",
+    "128": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><circle cx='64' cy='64' r='48' fill='%23FFB84D'/></svg>"
+  }
+}
